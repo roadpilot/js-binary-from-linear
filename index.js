@@ -25,5 +25,11 @@ var solution = function(isBadVersion) {
      * @return {integer} The first bad version
      */
     return function(n) {
+      for (let i = 1; i < n; i++) {
+        if (isBadVersion(i)) {
+            return i;
+        }
+      }
+      return n;        
     };
 };
